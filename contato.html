@@ -14,37 +14,38 @@
         <img src="logo.png" , width="400">
         <nav class="navbar">
             <a href="index.html">Início</a>
-            <a href="#sobre">Telemetria</a>
-            <a href="#sobre">Circuitos</a>
+            <a href="telemetria.html">Telemetria</a>
+            <a href="circuitos.html">Circuitos</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
-    <main class="container">
-        <div justify-content="center" align="center">
-            Site feito por:
 
+    <main class="container">
+        <section class="contato">
+            <center>
+                <h3>Entre em contato conosco:</h3>
+            </center>
             <div class="integrantes">
 
-                <div class="pessoa">
+                <div class="card" ali>
                     <p id="nomeAndre">André Teixeira</p>
                     <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
-                        onmouseover="document.getElementById('nomeAndre').innerHTML = '<b>Mestre do Gabu</b>';"
+                        onmouseover="document.getElementById('nomeAndre').innerHTML = '<b>O Brabo</b>';"
                         onmouseout="document.getElementById('nomeAndre').innerHTML = 'André Teixeira';">
-                        <img src="Andre.png" alt="Imagem André" width="150">
+                        <img src="Andre.png" alt="Imagem André" width="300">
                     </a>
                 </div>
 
-                <div class="pessoa">
-                    <p id="nomeGabriel">Gabriel Ditomaso</p>
-                    <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
-                        onmouseover="document.getElementById('nomeGabriel').innerHTML = '<b>Meu pato!!!</b>';"
-                        onmouseout="document.getElementById('nomeGabriel').innerHTML = 'Gabriel Ditomaso';">
-                        <img src="Gabriel.png" alt="Imagem Gabriel" width="150">
+                <div class="card">
+                    <h3>Gabriel Ditomaso</h3>
+                    <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');">
+                        <img id="fotoGabriel" src="Gabriel.png" alt="Imagem Gabriel" width="300" height="300"
+                            onmouseover="document.getElementById('fotoGabriel').src = 'moto.gif';"
+                            onmouseout="document.getElementById('fotoGabriel').src = 'gabriel2.jpeg';">
                     </a>
                 </div>
             </div>
-        </div>
-
+        </section>
 
     </main>
 

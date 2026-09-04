@@ -1,4 +1,6 @@
 /* Estilos Base (Mobile-First)  */
+
+
 * {
     box-sizing: border-box;
 }
@@ -22,6 +24,10 @@ body {
     gap: 10px;
     padding: 1rem;
 }
+.contato {
+    width: 100%;
+    text-align: center;
+}
 .card {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -34,10 +40,12 @@ img, video {
 }
 
 .integrantes {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 30px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .pessoa {
@@ -74,6 +82,31 @@ img, video {
 .navbar a:hover {
   color: #ffcc00;
 }
+.telemetria {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.telemetria table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.telemetria th,
+.telemetria td {
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+}
+
+.telemetria th {
+    background-color: #0f172a;
+    color: white;
+}
+
+.telemetria tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
 
 /* Breakpoint para Tablets (a partir de 600px) */
 @media (min-width: 600px) {
@@ -89,5 +122,16 @@ img, video {
 @media (min-width: 1024px) {
     .card{
         flex: 1 1 calc(33.333% - 1rem);
+    }
+}
+@media (max-width: 600px) {
+    .telemetria {
+        padding: 1rem;
+    }
+
+    .tabela-responsiva th,
+    .tabela-responsiva td {
+        padding: 8px;
+        font-size: 0.85rem;
     }
 }

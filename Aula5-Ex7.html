@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula de Javascript</title>
+
+        <script>
+            function mudar(id) {
+            let elemento = document.getElementById(id);
+
+            if (elemento.style.display === "none") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+        </script>
+        
+        
+    </head>
+    <body>
+        <p>
+            <a href="#" onclick="mudar('janela'); return false;">
+                Ver ou Não ver!!!!
+            </a>
+        </p>
+        <div id="janela">
+            <p>teste</p>
+        </div>
+    </body>
+</html>

@@ -51,3 +51,19 @@ function mostrarPista() {
         imagem.innerHTML = "";
     }
 }
+
+
+function mudar(id) {
+    let elemento = document.getElementById(id);
+
+    if (elemento.style.display === "none") {
+        elemento.style.display = "block";
+    } else {
+        elemento.style.display = "none";
+    }
+}
+
+function mostrarCadastro() {
+    document.getElementById("selecaoPista").style.display = "none";
+    document.getElementById("formularioPista").style.display = "block";
+}

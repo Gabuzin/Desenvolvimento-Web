@@ -14,37 +14,58 @@
         <img src="logo.png" , width="400">
         <nav class="navbar">
             <a href="index.html">Início</a>
-            <a href="#sobre">Telemetria</a>
-            <a href="#sobre">Circuitos</a>
+            <a href="telemetria.html">Telemetria</a>
+            <a href="circuitos.html">Circuitos</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
     <main class="container">
-        <div justify-content="center" align="center">
-            Site feito por:
+        <section class="card telemetria">
+            <h2>Resumo da sessão</h2>
 
-            <div class="integrantes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Melhor volta</th>
+                        <th>Tempo total</th>
+                        <th>Maior velocidade</th>
+                        <th>Voltas realizadas</th>
+                        <th>circuito</th>
+                    </tr>
+                </thead>
 
-                <div class="pessoa">
-                    <p id="nomeAndre">André Teixeira</p>
-                    <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
-                        onmouseover="document.getElementById('nomeAndre').innerHTML = '<b>Mestre do Gabu</b>';"
-                        onmouseout="document.getElementById('nomeAndre').innerHTML = 'André Teixeira';">
-                        <img src="Andre.png" alt="Imagem André" width="150">
-                    </a>
-                </div>
-
-                <div class="pessoa">
-                    <p id="nomeGabriel">Gabriel Ditomaso</p>
-                    <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
-                        onmouseover="document.getElementById('nomeGabriel').innerHTML = '<b>Meu pato!!!</b>';"
-                        onmouseout="document.getElementById('nomeGabriel').innerHTML = 'Gabriel Ditomaso';">
-                        <img src="Gabriel.png" alt="Imagem Gabriel" width="150">
-                    </a>
-                </div>
-            </div>
-        </div>
-
+                <tbody>
+                    <tr>
+                        <td>1:52.95</td>
+                        <td>9:24.75</td>
+                        <td>203 km/h</td>
+                        <td>5</td>
+                        <td>Interlagos</td>
+                    </tr>
+                    <tr>
+                        <td>1:35.80</td>
+                        <td>7:58.20</td>
+                        <td>205 km/h</td>
+                        <td>5</td>
+                        <td>Goiânia</td>
+                    </tr>
+                    <tr>
+                        <td>1:18.60</td>
+                        <td>6:37.10</td>
+                        <td>180 km/h</td>
+                        <td>5</td>
+                        <td>Tarumã</td>
+                    </tr>
+                    <tr>
+                        <td>1:48.40</td>
+                        <td>9:10.20</td>
+                        <td>190 km/h</td>
+                        <td>5</td>
+                        <td>Velocitta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
     </main>
 

@@ -1,0 +1,93 @@
+/* Estilos Base (Mobile-First)  */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+    background-color: #f8fafc;
+}
+.header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+}
+/* Container empilhado por padrão no mobile */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+}
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.pessoa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagemPista {
+    text-align: center;
+}
+
+#imagemPista img {
+    display: block;
+    margin: 0 auto;
+}
+
+.cabecalho h1 {
+  margin: 0 0 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* Breakpoint para Tablets (a partir de 600px) */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+/* Breakpoint para Desktops (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .card{
+        flex: 1 1 calc(33.333% - 1rem);
+    }
+}

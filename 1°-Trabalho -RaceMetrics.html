@@ -1,0 +1,176 @@
+<title>LapTimer - RaceMetrics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">LapTimer - RaceMetrics</header>
+    <main class="container">
+        <section class="card">
+            <h3>Como funciona o protótipo</h3>
+            <style>
+                p {
+                    text-align: justify;
+                }
+            </style>
+            <p>O protótipo funciona a partir de um circuito que possui uma única linha de partida e chegada. O veículo
+                percorre o circuito em um único sentido e, ao passar novamente pela linha de partida/chegada, o sistema
+                identifica que uma volta foi concluída e realiza a contagem automaticamente.</p>
+            <p>Além da contagem das voltas, o protótipo também permite trabalhar com dados de telemetria, como
+                velocidade e aceleração, possibilitando analisar o desempenho do veículo durante o percurso.</p>
+            <p>Para visualizar melhor o funcionamento da telemetria e entender como esses dados são apresentados, é
+                possível acessar a página desenvolvida pelo nosso colega, onde essas informações são demonstradas de
+                forma mais detalhada.</p>
+            <a href="Gabriel.html" target="_blank"><img src="Telemetria.png" alt="Imagem da Telemetria" width="800"></a>
+            <a href="Gabriel.html" target="_blank">
+                <p><u><i>Clique na imagem ou neste link para o site do Gabriel Ditomaso.</i></u></p>
+            </a>
+        </section>
+
+
+        <section class="card">
+            <h3>Cadastro de pista:</h3>
+            <form>
+                <table border="0">
+                    <tr>
+                        <td width="70">Nome</td>
+                        <td><input type="text" name="nome" size="40"></td>
+                    </tr>
+                </table>
+
+                <table border="0">
+                    <tr>
+                        <td width="70">Cidade</td>
+                        <td>
+                            <select name="cidade" required>
+                                <option value="" selected></option>
+                                <option value="catanduva">Catanduva-SP</option>
+                                <option value="pindorama">Pindorama-SP</option>
+                                <option value="sao_paulo">São Paulo-SP</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="0">
+                    <tr>
+                        <td width="70">Telefone</td>
+                        <td><input type="text" name="DDD" size="2"></td>
+                        <td><input type="text" name="telefone" size="32"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td align="center">
+                            <input type="submit" value="Salvar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+
+
+        <section class="card">
+            <h3>Selecione a sua pista de corrida</h3>
+
+            <div align="center">
+                <select name="pista" id="pista" onchange="mostrarPista()">
+                    <option value="interrogacao">Selecione uma pista</option>
+                    <option value="Interlagos">Autodromo de Interlagos (São Paulo - SP)</option>
+                    <option value="Goiania">Autodromo Internacional de Goiânia (Goiânia - GO)</option>
+                    <option value="Taruma">Autodromo Internacional de Tarumã (Viamão - RS)</option>
+                    <option value="Mogi-Guaçu">Autodromo Velocitta (Mogi Guaçu - SP)</option>
+                </select>
+            </div>
+
+            <div id="imagemPista"></div>
+        </section>
+
+        <script>
+            function mostrarPista() {
+                let pista = document.getElementById("pista").value;
+                let imagem = document.getElementById("imagemPista");
+
+                if (pista == "interrogacao") {
+                    imagem.innerHTML = `
+            <h4>DECIDE LOGO</h4>
+            <img src="interrogacao.png"
+                 alt="interrogacao"
+                 width="500">
+        `;
+                }
+
+                else if (pista == "Interlagos") {
+                    imagem.innerHTML = `
+            <h4>Autodromo de Interlagos (São Paulo - SP)</h4>
+            <img src="Autodromo de Interlagos (São Paulo - SP).jpg"
+                 alt="Autodromo de Interlagos"
+                 width="500">
+        `;
+                }
+
+                else if (pista == "Goiania") {
+                    imagem.innerHTML = `
+            <h4>Autodromo Internacional de Goiânia (Goiânia - GO)</h4>
+            <img src="Autodromo Internacional de Goiânia (Goiânia - GO).jpg"
+                 alt="Autodromo de Goiânia"
+                 width="500">
+        `;
+                }
+
+                else if (pista == "Taruma") {
+                    imagem.innerHTML = `
+            <h4>Autodromo Internacional de Tarumã (Viamão - RS)</h4>
+            <img src="Autodromo Internacional de Tarumã (Viamão - RS).jpg"
+                 alt="Autodromo de Tarumã"
+                 width="500">
+        `;
+                }
+
+                else if (pista == "Mogi-Guaçu") {
+                    imagem.innerHTML = `
+            <h4>Autodromo Velocitta (Mogi Guaçu - SP)</h4>
+            <img src="Autodromo Velocitta (Mogi Guaçu - SP).jpg"
+                 alt="Autodromo Velocitta"
+                 width="500">
+        `;
+                }
+
+                else {
+                    imagem.innerHTML = "";
+                }
+            }
+
+            mostrarPista();
+
+        </script>
+    </main>
+
+    <div justify-content="center" align="center">
+        Site feito por:
+
+        <div class="integrantes">
+
+            <div class="pessoa">
+                <p id="nomeAndre">André Teixeira</p>
+                <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
+                    onmouseover="document.getElementById('nomeAndre').innerHTML = '<b>Mestre do Gabu</b>';"
+                    onmouseout="document.getElementById('nomeAndre').innerHTML = 'André Teixeira';">
+                    <img src="Andre.png" alt="Imagem André" width="150">
+                </a>
+            </div>
+
+            <div class="pessoa">
+                <p id="nomeGabriel">Gabriel Ditomaso</p>
+                <a href="#" onmousedown="alert('Site feito por André Teixeira e Gabriel Ditomaso.');"
+                    onmouseover="document.getElementById('nomeGabriel').innerHTML = '<b>Meu pato!!!</b>';"
+                    onmouseout="document.getElementById('nomeGabriel').innerHTML = 'Gabriel Ditomaso';">
+                    <img src="Gabriel.png" alt="Imagem Gabriel" width="150">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
